@@ -1,0 +1,37 @@
+
+
+   $(document).ready(function() {
+                                    $("#notification_type").change(function() {
+                                      var notification_type = $(this).val();
+                                      if(notification_type != "") {
+                                        .$controller->GetFunctionValues(notification_type).
+                                      } else {
+                                        $("#state").html("<option value=''>------- Select --------</option>");
+                                      }
+                                    });
+                                  });
+					 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <?php
+                                echo "<select>";
+                                while ($row = mysql_fetch_array($result)) {
+                                
+                                echo "<option value='" . $row['project_name'] ."'>" . $row['project_name']."</option>";
+                                }
+                                echo "</select>";
+                                ?>

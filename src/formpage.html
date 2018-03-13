@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<?php
+
+$content='
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PHP Email Form Script - reusable form</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="form.css" >
+        <script src="form.js"></script>
+		<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </head>
+    <body >
+
+
+
+        <div class="container" style="width:100%">
+            <div class="imagebg"></div>
+            <div class="row " style="margin-top: 80px; width:100%">
+                <div class="col-md-8 col-md-offset-2 form-container">
+                   <!-- <h2>Outage Notification Tool </br> Service System </h2> -->
+				   
+						<h2>Outage Notification Tool </br> Service System</h2>
+						
+                    <p> Please provide details: </p>
+                    <form role="form" method="post" id="reused_form">
+                      <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Step:1- Notification Type: </label>
+                               
+					  <select>
+					  <option value="null">Please select</option>
+					  <option value="systemOutage">System Outage</option>
+					  <option value="maintenance">Maintenance</option>
+					  <option value="disasterRecovery">Disaster Recovery</option>
+					</select>
+					
+					</div>
+								
+					   
+                            <div class="col-sm-6 form-group">
+                                <label>Step:2- Function Status: </label>
+					 
+					  <select>
+					  <option value="null">Please select</option>
+					  <option value="systemOutage">Value#</option>
+					  <option value="maintenance">Value#</option>
+					  <option value="disasterRecovery">value#</option>
+					</select>
+					
+					</div>
+					</div>	
+						<!--<div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label>How do you rate your overall experience?</label>
+                                <p>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="bad" >
+                                        Bad 
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="average" >
+                                        Average 
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="good" >
+                                        Good 
+                                    </label>
+                                </p>
+                            </div>
+                        </div> -->
+						
+						 <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Step:3- Select Application(s)</label>
+                                <div class="myBox">
+                                   
+                                        <input type="checkbox" name="1TCCOE" id="radio_experience" value="bad" >
+                                         1TCCOE <br>
+                                  
+                                    
+                                        <input type="checkbox" name=" 4Tell" id="radio_experience" value="average" >
+										4Tell<br>
+                                  
+                                 
+                                        <input type="checkbox" name="ADMS" id="radio_experience" value="good" >
+                                        ADMS <br>
+                                 
+									
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="col-sm-6 form-group">
+                                <label for="comments">Application Components Impacted :</label>
+                                <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div>
+						
+						 <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Step:5- Region/Country Impacted</label>
+                                <div>
+                                   
+                                        <input type="checkbox" name="GLOBAL" id="radio_experience" value="" >
+                                         GLOBAL <br>
+                                  
+                                    
+                                        <input type="checkbox" name=" NAMER" id="radio_experience" value="" >
+										NAMER<br>
+                                  
+                                 
+                                        <input type="checkbox" name="MEA" id="radio_experience" value="" >
+                                        MEA <br>
+										 <input type="checkbox" name="EUROPE" id="radio_experience" value="" >
+                                        EUROPE <br>
+										 <input type="checkbox" name="APAC" id="radio_experience" value="" >
+                                        APAC <br>
+                                 
+									
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="col-sm-6 form-group">
+                                <label for="name">Country:</label>
+                                <input type="text" class="form-control" id="country" name="name">
+                            </div>
+                        </div>
+						
+						<div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="name"> Estimate Start Date/Time:</label>
+                               <div class="form-group">
+							<div class="input-append date form_datetime">
+
+							<input size="16" type="text" value="" readonly>
+				<span class="add-on"><i class="icon-th"></i></span>
+
+
+</div>
+						</div>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Estimate End Date/Time:</label>
+                                <div class="form-group">
+							<div class='input-group date' id='datetimepicker1'>
+							<input type='text' class="form-control" />
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar" $('#datetimepicker').data("DateTimePicker").FUNCTION()></span>
+						</span>
+					</div>
+					</div>
+                            </div>
+                        </div>
+						
+						
+						
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="name"> Your Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-success btn-block" >Send </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your feedback successfully!</h3> </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>'
+?>

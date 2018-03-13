@@ -1,0 +1,38 @@
+<?php
+
+$result=""  ;
+			  $con= mysqli_connect("localhost","root","");
+                        mysqli_select_db($con,"majordomo_db");
+      
+  $sql = "select application_name from application_tbl;";
+  $res=mysqli_query($con, $sql) or die("Error: ".mysqli_error($con));
+   while($row = mysqli_fetch_array($res,MYSQLI_ASSOC)) {
+	   
+                        $result=$result.'<input type="checkbox" name="$row[0]" id="radio_experience" value="$row[0]" >
+                                       '.$row["application_name"].' <br>';
+                         }
+                        return $result;
+    
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
